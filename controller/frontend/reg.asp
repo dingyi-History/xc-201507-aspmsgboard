@@ -45,12 +45,15 @@ msg ="×¢²á³É¹¦"
 Else
 msg="×¢²áÊ§°Ü"
 end If
-Call closedb(rs,conn)
+
 
 '×¢²áºó×Ô¶¯µÇÂ¼'
 Session("username") = username
+sql = "select uid from alluser where uname='"&username&"'"
+Call dosql(sql,1)
+Session("uid") = rs("uid")
 
-
+Call closedb(rs,conn)
 Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
 
 %>

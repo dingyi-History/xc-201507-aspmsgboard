@@ -1,7 +1,9 @@
 <%
+'变量声明'
 Dim ser,db,username,userpwd,connstr
 Dim errnumber,errdes,errsource,errline
 dim rs,conn,sql,ra,rs2,sql2
+
 Response.Charset="GBK"
 ''-----SQL配置信息-----''
 '以上填写:服务器IP,如跟空间同IP请填写(local),默认端口1433
@@ -14,6 +16,7 @@ username = "sa"
 userpwd = "000000"
 
 On Error Resume Next
+'获取ADO连接对象，打开连接'
 set conn = Server.CreateObject("ADODB.connection")
 connstr = "provider=sqloledb.1;data source="& ser & ";User ID=" & username & ";pwd=" & userpwd & ";Initial Catalog="& db & ";"	
 conn.Open connstr
@@ -23,7 +26,7 @@ if err then
 Response.Write Err.Number &"<br />"&Err.Description & "<br / >"& Err.Source & "<br / >"& Err.Line & "<br / >"
 end if
 
-'执行sql语句的函数
+'执行sql语句的函数，1为查询，2为增改删
 Function dosql(sql, sqli)
 Select Case sqli
 	case 1   
@@ -35,13 +38,14 @@ Select Case sqli
 End Select	
 end Function
 
+'单独的数据库查询，为嵌套查询方便进行区分'
 Function dosql2(sql2)
 set rs2 = server.createobject("adodb.recordset")
 rs2.open sql2,conn,1,1
 end Function
 
 
-	'关闭数据库连接 '
+'关闭数据库连接 和rs'
 Function closedb(rs, conn)
 rs.close
 set rs = Nothing
