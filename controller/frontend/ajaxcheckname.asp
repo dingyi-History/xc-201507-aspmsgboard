@@ -1,8 +1,6 @@
 <!--#include file="../../model/connsqlserver.asp"-->
 <%
 response.expires=-1
-
-
 sql="SELECT * FROM alluser WHERE uname="
 sql=sql & "'" & request.querystring("u") & "'"
 

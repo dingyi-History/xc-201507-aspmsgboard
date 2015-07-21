@@ -28,7 +28,7 @@
 				<div class="am-u-md-4">
 				
 				<%if Session("username")<>"" then %>
-				<button type="button" class="am-btn am-btn-success am-btn-block  am-radius" data-am-offcanvas="{target: '#motai'}">我的留言</button>
+				<a href="../../view/mymsg.asp"><button type="button" class="am-btn am-btn-success am-btn-block  am-radius">我的留言</button></a>
 					<br />
 					<a href="../../controller/frontend/logout.asp"><button type="button" class="am-btn am-btn-danger am-btn-block  am-radius" >注销</button></a>
 				<%

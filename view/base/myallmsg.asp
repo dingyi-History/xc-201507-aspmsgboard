@@ -1,6 +1,15 @@
 <!--#include file="../../model/connsqlserver.asp"-->
 
-<% sql="SELECT * FROM msg INNER JOIN alluser ON msg.uid=alluser.uid order by mid desc " 
+<% 
+
+if Session("uid")="" then
+msg = "对不起，请登录后查看"
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
+Response.end
+end if
+
+uid = Session("uid")
+sql="SELECT * FROM msg  INNER JOIN alluser ON msg.uid=alluser.uid  where msg.uid='"&uid&"' order by mid desc " 
 call dosql(sql,1) 
 
 rs.pagesize=5

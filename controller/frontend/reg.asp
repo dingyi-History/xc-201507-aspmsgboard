@@ -27,14 +27,14 @@ end if
 
 
 '用户名重复判断'
-'sql = "SELECT * FROM alluser where uname='"&username&"'"
-'Call dosql(sql,1)
-'If  rs.bof And rs.eof Then
-'msg="用户名重复error"
-'Call closedb(rs,conn)
-'Response.Write "<script>alert('"&msg&"');location.href='../view/reg.asp'</script>"
-'Response.end
-'end If'
+sql = "SELECT * FROM alluser where uname='"&username&"'"
+Call dosql2(sql)
+If not rs2.eof Then
+msg="用户名重复"
+Call closedb(rs,conn)
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
+Response.end
+end If
 
 
 '进行注册'
