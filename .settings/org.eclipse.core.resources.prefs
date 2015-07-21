@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//controller/frontend/addcomment.asp=GBK
+encoding//controller/frontend/addmsg.asp=GBK
+encoding//controller/frontend/login.asp=GBK
+encoding//controller/frontend/logout.asp=GBK
+encoding//controller/frontend/reg.asp=GBK
+encoding//model/connsqlserver.asp=GBK
+encoding//view/base/amsg.asp=GBK
+encoding//view/base/footer.asp=GBK
+encoding//view/base/header.asp=GBK
+encoding//view/base/html.asp=GBK
+encoding//view/base/msg.asp=GBK
+encoding//view/base/rlheader.asp=GBK
+encoding/<project>=GBK
+encoding/index.asp=GBK
