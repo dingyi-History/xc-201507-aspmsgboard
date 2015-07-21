@@ -9,6 +9,7 @@
 		<title>我是一个留言板</title>
 		<link rel="stylesheet" type="text/css" href="../../public/assets/css/amazeui.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../public/assets/css/index.css" />
+			<script src="../../public/assets/js/index.js"></script>
 	</head>
 
 	<body>

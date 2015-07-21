@@ -9,19 +9,19 @@ userpwd2 = Request.form("userpwd2")
 
 If username="" or len(username)<3 Then
 msg="用户名太短error"
-Response.Write "<script>alert('"&msg&"');location.href='../view/reg.asp'</script>"
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
 Response.end
 end If
 
 if userpwd1<>userpwd2 Then
 msg="密码不一致error"
-Response.Write "<script>alert('"&msg&"');location.href='../view/reg.asp'</script>"
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
 Response.end
 end if
 
 if len(userpwd1)<3 or len(userpwd2)<3 Then
 msg="密码长度不得少于三位error"
-Response.Write "<script>alert('"&msg&"');location.href='../view/reg.asp'</script>"
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
 Response.end
 end if
 
@@ -51,6 +51,6 @@ Call closedb(rs,conn)
 Session("username") = username
 
 
-Response.Write "<script>alert('"&msg&"');location.href='../index.asp'</script>"
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
 
 %>

@@ -5,11 +5,13 @@ userpwd = Request.form("userpwd")
 Response.Charset="GBK"
 
 If username="" Or userpwd ="" Then
-Response.Write "<script>alert('请正确输入！');location.href='../../view/login.asp'</script>"
+Response.Write "<script>alert('请正确输入！');location.href='../../index.asp'</script>"
 end if 
+
 sql="use  msgdb SELECT * FROM alluser WHERE uname = '"&username&"' AND upwd = '"&userpwd&"' AND level=0"
 Call dosql(sql,1)
-if rs.eof Then
+
+if rs.recordcount=1 Then
 Session("username") = username
 sql = "select uid from alluser where uname='"&username&"'"
 Call dosql(sql,1)
