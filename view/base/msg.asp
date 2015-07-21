@@ -20,7 +20,11 @@ end if
 		<div class="am-u-md-10 am-u-sm-centered">
 			<article class="am-comment">
 				<a href="#" style="float: left;">
+				<%if rs("level")=1 Then%>
+				<h3 style="color: red;">π‹¿Ì‘±</h3>
+				<%else%>
 					<h3><%=rs("uname")%></h3>
+					<%end if %>
 				</a>
 				<%if Session("admin")<>"" Then%>
 				 <a style="float: right; color: red;" href="../../controller/admin/delmsg.asp?mid=<%=rs("mid")%>">…æ≥˝</a>

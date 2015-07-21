@@ -14,6 +14,7 @@
 
 
     <div class="am-topbar-right">
+
     <%if Session("username")="" Then%>
     <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"  data-am-modal="{target: '#reg'}">×¢²á</button>
        <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" data-am-modal="{target: '#login'}">µÇÂ¼ºóÁôÑÔ</button>

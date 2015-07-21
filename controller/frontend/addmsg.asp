@@ -9,7 +9,7 @@ uid = Session("uid")
 
 If Session("username")="" Then
 msg="对不起，请登录后留言error"
-Response.Write "<script>alert('"&msg&"');location.href='../../view/login.asp'</script>"
+Response.Write "<script>alert('"&msg&"');location.href='../../index.asp'</script>"
 Response.end
 end if
 
